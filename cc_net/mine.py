@@ -192,15 +192,15 @@ REPRODUCE_CONFIG = Config(
 
 TEST_CONFIG = BASE_CONFIG._replace(
     config_name="test",
-    dump="2019-09",
+    dump='2014-15', #"2019-09",
     output_dir=Path("test_data"),
     execution="local",
     num_shards=4,
     num_segments_per_shard=1,
     hash_in_mem=2,
     mine_num_processes=2,
-    lang_whitelist=["de", "it", "fr"],
-    target_size="32M",
+    lang_whitelist=["fr"] #["de", "it", "fr"],
+    target_size="320M",
     cleanup_after_regroup=False,
     cache_dir=Path("test_data/wet_cache"),
 )
