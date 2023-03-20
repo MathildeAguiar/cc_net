@@ -74,7 +74,7 @@ class Config(NamedTuple):
     """
 
     config_name: str = "base"
-    dump: str = "2017-51"
+    dump: str = "2014-15"  #"2017-51"
     output_dir: Path = Path("data")
     mined_dir: str = "mined"
     execution: str = "auto"
@@ -83,7 +83,7 @@ class Config(NamedTuple):
     metadata: Optional[str] = None
     min_len: int = 300
     hash_in_mem: int = 50
-    lang_whitelist: Sequence[str] = []
+    lang_whitelist: Sequence[str] = ['fr']
     lang_blacklist: Sequence[str] = []
     lang_threshold: float = 0.5
     keep_bucket: Sequence[str] = []
@@ -91,7 +91,7 @@ class Config(NamedTuple):
     cutoff: Path = CUTOFF_CSV
     lm_languages: Optional[Sequence[str]] = None
     mine_num_processes: int = 16
-    target_size: str = "4G"
+    target_size: str = "320M"  #"4G"
     cleanup_after_regroup: bool = True
     task_parallelism: int = -1
     pipeline: Sequence[str] = DEFAULT_PIPELINE
@@ -171,7 +171,7 @@ BYLANG_CONFIG = Config(
 
 REPRODUCE_CONFIG = Config(
     config_name="reproduce",
-    dump="2019-09",
+    dump= '2014-15', #"2019-09",
     mined_dir="reproduce",
     pipeline=["fetch_metadata", "keep_lang", "keep_bucket", "split_by_lang"],
     metadata="https://dl.fbaipublicfiles.com/cc_net/1.0.0",
