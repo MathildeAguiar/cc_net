@@ -4,7 +4,7 @@
     "num_shards": 4,
     "num_segments_per_shard": 1,
     "mine_num_processes": 0,
-    "lang_whitelist": ["de", "it", "fr"],
+    "lang_whitelist": ["fr"],
     "pipeline": [
         "dedup",
         "lid",

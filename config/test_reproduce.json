@@ -12,5 +12,6 @@
     "output_dir": "test_data2",
     "mined_dir": "reproduce",
     "target_size": "32M",
-    "cache_dir": "test_data/wet_cache"
+    "cache_dir": "test_data/wet_cache",
+    "config_name": "reproduce"
 }
